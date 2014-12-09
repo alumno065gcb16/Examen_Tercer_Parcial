@@ -20,7 +20,7 @@ function Comienza(){
 	
 	//Actualiza la aceleracion cada 2 segundos
 	//
-	var opciones = {frequency:200};
+	var opciones = {frequency:2000};
 	
 	watcID = navigator.accelerometer.watchAcceleration(Correcto, Error, opciones);
 	navigator.geolocation.getCurrentPosition(Localiza, ErrorLocalizacion);
@@ -29,7 +29,7 @@ function Comienza(){
 
 //Detiene la 'observacion' de la aceleracion
 //
-function Detener() {
+function Detente() {
 	if (wachID) {
 		navigator.accelerometer.clearWatch(watchID);
 		watchID = null;
@@ -41,9 +41,9 @@ function Detener() {
 function Correcto(acceleration) {
 	var element = document.getElementById('acelerometro');
 	
-	element.innerHTML = 'Aceleracion en X: ' + aceleracion.x + '<br />' +
-	'Aceleracion en Y: ' + aceleracion.y + '<br />' +
-	'Aceleracion en Z: ' + aceleracion.z + '<br />' +
+	element.innerHTML = 'Aceleracion en X: ' + aceleration.x + '<br />' +
+	'Aceleracion en Y: ' + aceleration.y + '<br />' +
+	'Aceleracion en Z: ' + aceleration.z + '<br />' +
 	'Intervalo: '        + '<br />';
 }
 
