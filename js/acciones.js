@@ -30,7 +30,7 @@ function Comienza(){
 //Detiene la 'observacion' de la aceleracion
 //
 function Detente() {
-	if (wachID) {
+	if (watchID) {
 		navigator.accelerometer.clearWatch(watchID);
 		watchID = null;
 	}
